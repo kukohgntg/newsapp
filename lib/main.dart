@@ -5,6 +5,7 @@ import 'package:get/get.dart';
 import 'package:newsapp/app/controllers/firebase_auth_controller.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
+import 'app/controllers/firebase_messaging_controller.dart';
 import 'app/routes/app_pages.dart';
 import 'firebase_options.dart';
 
@@ -14,6 +15,8 @@ void main() async {
     options: DefaultFirebaseOptions.currentPlatform,
   );
   await Get.putAsync(() async => await SharedPreferences.getInstance());
+  await FirebaseMessagingController().initPushNotification();
+  await FirebaseMessagingController().initLocalNotification();
 
   runApp(Main());
 }

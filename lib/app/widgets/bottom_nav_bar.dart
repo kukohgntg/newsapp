@@ -4,7 +4,7 @@ import 'package:get/get.dart';
 import '../modules/discover/views/discover_view.dart';
 import '../modules/home/views/home_view.dart';
 import '../modules/profile/views/profile_view.dart';
-import '../routes/app_pages.dart';
+// import '../routes/app_pages.dart';
 
 class BottomNavBar extends StatelessWidget {
   const BottomNavBar({
