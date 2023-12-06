@@ -1,10 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import '../modules/discover/views/discover_view.dart';
-import '../modules/home/views/home_view.dart';
-import '../modules/profile/views/profile_view.dart';
-// import '../routes/app_pages.dart';
+import '../routes/app_pages.dart';
 
 class BottomNavBar extends StatelessWidget {
   const BottomNavBar({
@@ -29,7 +26,8 @@ class BottomNavBar extends StatelessWidget {
             child: IconButton(
               onPressed: () {
                 // Get.toNamed(Routes.HOME);
-                Get.to(() => const HomeView());
+                // Get.to(() => const HomeView());
+                Get.offAllNamed(Routes.HOME);
               },
               icon: const Icon(Icons.home),
             ),
@@ -40,7 +38,8 @@ class BottomNavBar extends StatelessWidget {
           icon: IconButton(
             onPressed: () {
               // Get.toNamed(Routes.DISCOVER);
-              Get.to(() => const DiscoverView());
+              // Get.to(() => const DiscoverView());
+              Get.offAllNamed(Routes.DISCOVER);
             },
             icon: const Icon(Icons.search),
           ),
@@ -51,8 +50,8 @@ class BottomNavBar extends StatelessWidget {
             margin: const EdgeInsets.only(right: 50),
             child: IconButton(
               onPressed: () {
-                // Get.toNamed(Routes.PROFILE);
-                Get.to(() => const ProfileView());
+                Get.offAllNamed(Routes.PROFILE);
+                // Get.to(() => const ProfileView());
               },
               icon: const Icon(Icons.person),
             ),
