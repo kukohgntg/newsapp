@@ -8,8 +8,8 @@ import '../../../data/models/article_models.dart';
 
 class HomeController extends GetxController {
   late RxList<Article> newsArticles;
-
   var isLoading = true.obs;
+
   @override
   void onInit() {
     super.onInit();
