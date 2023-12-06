@@ -35,7 +35,7 @@ class BottomNavBar extends StatelessWidget {
         BottomNavigationBarItem(
           icon: IconButton(
             onPressed: () {
-              // Get.offAllNamed(Routes.DISCOVER);
+              Get.offAllNamed(Routes.DISCOVER);
             },
             icon: const Icon(Icons.search),
           ),
@@ -46,7 +46,7 @@ class BottomNavBar extends StatelessWidget {
             margin: const EdgeInsets.only(right: 50),
             child: IconButton(
               onPressed: () {
-                // Get.toNamed(Routes.PROFILE);
+                Get.offAllNamed(Routes.PROFILE);
               },
               icon: const Icon(Icons.person),
             ),

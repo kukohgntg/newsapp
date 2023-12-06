@@ -2,8 +2,12 @@ import 'package:get/get.dart';
 
 import '../modules/article/bindings/article_binding.dart';
 import '../modules/article/views/article_view.dart';
+import '../modules/discover/bindings/discover_binding.dart';
+import '../modules/discover/views/discover_view.dart';
 import '../modules/home/bindings/home_binding.dart';
 import '../modules/home/views/home_view.dart';
+import '../modules/profile/bindings/profile_binding.dart';
+import '../modules/profile/views/profile_view.dart';
 
 part 'app_routes.dart';
 
@@ -29,6 +33,16 @@ class AppPages {
         content: '',
       ),
       binding: ArticleBinding(),
+    ),
+    GetPage(
+      name: _Paths.DISCOVER,
+      page: () => const DiscoverView(),
+      binding: DiscoverBinding(),
+    ),
+    GetPage(
+      name: _Paths.PROFILE,
+      page: () => const ProfileView(),
+      binding: ProfileBinding(),
     ),
   ];
 }
