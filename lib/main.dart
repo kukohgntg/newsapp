@@ -15,12 +15,12 @@ import 'firebase_options.dart';
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await GetStorage.init();
-  // await Firebase.initializeApp(
-  //   options: DefaultFirebaseOptions.currentPlatform,
-  // );
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
   // await Get.putAsync(() async => await SharedPreferences.getInstance());
-  // await FirebaseMessagingController().initPushNotification();
-  // await FirebaseMessagingController().initLocalNotification();
+  await FirebaseMessagingController().initPushNotification();
+  await FirebaseMessagingController().initLocalNotification();
 
   runApp(Main());
 }
