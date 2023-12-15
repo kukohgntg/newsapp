@@ -8,7 +8,7 @@ import 'package:get/get.dart';
 import '../controllers/create_empoyee_controller.dart';
 
 class CreateEmpoyeeView extends GetView<CreateEmpoyeeController> {
-  const CreateEmpoyeeView({Key? key}) : super(key: key);
+  const CreateEmpoyeeView({super.key});
   @override
   Widget build(BuildContext context) {
     return Scaffold(
