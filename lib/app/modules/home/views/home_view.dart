@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
+import 'package:newsapp/app/routes/app_pages.dart';
 
 import '../../../widgets/bottom_nav_bar.dart';
 import '../../../widgets/custom_tag.dart';
@@ -13,17 +14,17 @@ class HomeView extends GetView<HomeController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.transparent,
-        elevation: 0,
-        leading: IconButton(
-          onPressed: () {},
-          icon: const Icon(
-            Icons.menu,
-            color: Colors.white,
-          ),
-        ),
-      ),
+      // appBar: AppBar(
+      //   backgroundColor: Colors.transparent,
+      //   elevation: 0,
+      //   leading: IconButton(
+      //     onPressed: () {},
+      //     icon: const Icon(
+      //       Icons.menu,
+      //       color: Colors.white,
+      //     ),
+      //   ),
+      // ),
       bottomNavigationBar: const BottomNavBar(index: 0),
       extendBodyBehindAppBar: true,
       body: Obx(
@@ -189,13 +190,26 @@ class _NewsOfTheDay extends StatelessWidget {
             ),
             TextButton(
                 onPressed: () {
-                  //TODO:Route to....
+                  Get.to(
+                    () => ArticleView(
+                      title: homeController.newsArticles[0].title.toString(),
+                      description:
+                          homeController.newsArticles[0].description.toString(),
+                      imageUrl:
+                          homeController.newsArticles[0].urlToImage.toString(),
+                      author: homeController.newsArticles[0].author.toString(),
+                      publishedAt:
+                          homeController.newsArticles[0].publishedAt.toString(),
+                      content:
+                          homeController.newsArticles[0].content.toString(),
+                    ),
+                  );
                 },
                 style: TextButton.styleFrom(padding: EdgeInsets.zero),
                 child: Row(
                   children: [
                     Text(
-                      'Baca Semua',
+                      'Baca selengkapnya',
                       style: Theme.of(context)
                           .textTheme
                           .bodyLarge!

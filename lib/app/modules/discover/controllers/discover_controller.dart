@@ -50,7 +50,7 @@ class DiscoverController extends GetxController {
       country: "us",
       query: searchTerm.value,
       category: selectedCategory.value,
-      pageSize: 50,
+      pageSize: 20,
     );
   }
 

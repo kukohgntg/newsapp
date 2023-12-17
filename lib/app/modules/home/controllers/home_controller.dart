@@ -34,7 +34,7 @@ class HomeController extends GetxController {
       newsArticles.value = await newsAPI.getTopHeadlines(
         country: "us",
         category: "GENERAL",
-        pageSize: 50,
+        pageSize: 10,
       );
     } catch (e) {
       if (kDebugMode) {
